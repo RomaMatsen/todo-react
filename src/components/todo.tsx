@@ -1,13 +1,22 @@
 import { TodoItemInterface } from "../types"
 
-export const Todo = (
+interface Prop {
+    item: TodoItemInterface
+    doneItem: () => void
+}
 
-    { item }: { item: TodoItemInterface }
-
-) => {
+export const Todo = (p: Prop) => {
     return (
-        <div className="p-2 rounded-full bg-slate-200 text-black">
-            {item.title}
+        <div className={`p-2 flex justify-between rounded-full text-black ${p.item.completed ? "bg-green-200" : "bg-slate-200"}`}>
+            <p>
+                {p.item.title}
+            </p>
+
+            <button onClick={p.doneItem}>
+                {
+                    p.item.completed ? "undone" : "done"
+                }
+            </button>
         </div>
     )
 }
