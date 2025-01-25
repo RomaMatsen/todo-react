@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TodoItemInterface } from "C:\Users\пк\Documents\GitHub\todo-react\src\types";
-import { Todo } from "C:\Users\пк\Documents\GitHub\todo-react\src\components\todo";
+import { TodoItemInterface } from "../../types";
+import { Todo } from "../todo";
 
 
 export const TodoListPage = () => {

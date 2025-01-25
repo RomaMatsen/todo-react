@@ -8,13 +8,13 @@ export const Navbar = (p: Props) => {
         <div className="w-screen h-16 gap-2 bg-green-100 flex justify-end px-6 items-center">
             
             <button onClick={() => p.setPage("todo-list")} 
-                className={`${p.page==="todo-list"?"p-4":"p-2"} rounded-full px-4 bg-slate-300`}>Todo list</button>
+                className={`${p.page==="todo-list" && "border-2 border-solid border-blue-600"} p-2 rounded-full px-4 bg-slate-300`}>Todo list</button>
             
             <button onClick={() => p.setPage("contacts")} 
-                className={`${p.page==="contacts"?"p-4":"p-2"} rounded-full px-4 bg-slate-300`}>Contacts</button>
+                className={`${p.page==="contacts" && "border-2 border-solid border-blue-600"} p-2 rounded-full px-4 bg-slate-300`}>Contacts</button>
             
             <button onClick={() => p.setPage("about")} 
-                className={`${p.page==="about"?"p-4":"p-2"} rounded-full px-4 bg-slate-300`}>About</button>
+                className={`${p.page==="about" && "border-2 border-solid border-blue-600"} p-2 rounded-full px-4 bg-slate-300`}>About</button>
 
         </div>
     )
