@@ -1,13 +1,14 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navbar } from "./components/navbar";
 import { TodoListPage } from "./components/pages/todolistPage";
 import { ContactsPage } from "./components/pages/contactsPage";
 import { AboutPage } from "./components/pages/aboutPage";
 
 function App() {
-
     const [page, setPage] = useState<"todo-list" | "contacts" | "about">("todo-list");
+
+    useEffect(() => { })
 
     return (
         <div className="w-screen min-h-screen flex flex-col">
