@@ -10,13 +10,13 @@ function App() {
     const [page, setPage] = useState<"todo-list" | "contacts" | "about">("todo-list");
 
     return (
-        <div className="w-screen h-screen flex flex-col">
-            <Navbar setPage={setPage} page={page}/>
+        <div className="w-screen min-h-screen flex flex-col">
+            <Navbar setPage={setPage} page={page} />
             <p>{page}</p>
 
-            { page === "todo-list" && (<TodoListPage />) }
-            { page === "contacts" && (<ContactsPage />) }
-            { page === "about" && (<AboutPage />) }
+            {page === "todo-list" && (<TodoListPage />)}
+            {page === "contacts" && (<ContactsPage />)}
+            {page === "about" && (<AboutPage />)}
 
         </div>
     );
